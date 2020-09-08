@@ -22,6 +22,7 @@ $db->exec('SELECT InitSpatialMetadata()');
 
 Stack trace:
 
+```
 root@e629d8ddb1d3:/var/www/html# gdb --args php /test.php 
 GNU gdb (Debian 7.12-6) 7.12.0.20161007-git
 Copyright (C) 2016 Free Software Foundation, Inc.
@@ -69,4 +70,6 @@ Program received signal SIGSEGV, Segmentation fault.
     rtld_fini=<optimized out>, stack_end=0x7ffc322975c8) at ../csu/libc-start.c:291
 #17 0x0000563da54df3fa in _start ()
 (gdb) 
+```
 
+This is the latest head revision of MapServer and SpatiaLite 4.3.  I have tried with MapServer 7.4 as well.  See https://www.gaia-gis.it/fossil/libspatialite/tktview/f65f05b71a2f8ca15ca6a2316d0e53db77ffbe70 .
